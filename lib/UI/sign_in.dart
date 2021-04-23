@@ -7,6 +7,7 @@ final GoogleSignIn googleSignIn = GoogleSignIn();
 String name;
 String email;
 String imageUrl;
+
 Future<String> signInWithGoogle() async {
   await Firebase.initializeApp();
   final GoogleSignInAccount googleSignInAccount = await googleSignIn.signIn();
@@ -45,3 +46,33 @@ Future<void> signOutGoogle() async {
   await googleSignIn.signOut();
   print("User Signed Out");
 }
+
+// //tugass
+
+// Future<SignInSignUpResult> createUser({String email, String pass}) async {
+//   try {
+//     UserCredential result = await _auth.createUserWithEmailAndPassword(
+//         email: email, password: pass);
+//     return SignInSignUpResult(user: result.user);
+//   } catch (e) {
+//     return SignInSignUpResult(message: e.toString());
+//   }
+// }
+
+ 
+
+// Future<SignInSignUpResult> signInWithEmail({String email, String pass}) async {
+//   try {
+//     UserCredential result =
+//         await _auth.signInWithEmailAndPassword(email: email, password: pass);
+//     return SignInSignUpResult(user: result.user);
+//   } catch (e) {
+//     return SignInSignUpResult(message: e.toString());
+//   }
+// }
+
+// Future<void> signOutEmail() async {
+//   _auth.signOut();
+//   print("User Signed Out");
+// }
+

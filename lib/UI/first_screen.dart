@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:prak10minggu11/login_page.dart';
-import 'package:prak10minggu11/sign_in.dart';
+import 'package:prak10minggu11/UI/login_page.dart';
+import 'package:prak10minggu11/UI/sign_in.dart';
 
 class FirstScreen extends StatelessWidget {
   @override
@@ -57,6 +57,7 @@ class FirstScreen extends StatelessWidget {
                     fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 40),
+              // ignore: deprecated_member_use
               RaisedButton(
                 onPressed: () {
                   signOutGoogle();
