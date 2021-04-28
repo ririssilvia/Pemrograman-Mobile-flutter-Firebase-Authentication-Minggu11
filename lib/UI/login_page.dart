@@ -2,7 +2,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:prak10minggu11/UI/Success_Screen.dart';
 import 'package:prak10minggu11/UI/auth.dart';
-import 'package:prak10minggu11/UI/profile_screen.dart';
 import 'package:prak10minggu11/UI/register_screen.dart';
 import 'package:prak10minggu11/UI/sign_in.dart';
 import 'package:prak10minggu11/UI/first_screen.dart';
@@ -13,14 +12,15 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  //instance dari kelas auth yang berisi variabel dan fungsi yang menggambarkan sebuah objek kelas auth.dart
+  var authHandler = new Auth();
   TextEditingController _emailController = new TextEditingController();
   TextEditingController _passController = new TextEditingController();
-  //tambahkan form
+  //tambahkan form untuk validasi form
   final _formKey = GlobalKey<FormState>();
-  var authHandler = new Auth();
 
+  //untuk hidepassword icon
   bool _isHidePassword = true;
-
   void _togglePasswordVisibility() {
     setState(() {
       _isHidePassword = !_isHidePassword;
@@ -163,23 +163,10 @@ class _LoginPageState extends State<LoginPage> {
                                 borderRadius:
                                     BorderRadiusDirectional.circular(30),
                               ),
-                              // onPressed: ()  async  {
-                              //     if (_formKey.currentState.validate()){}
-                              //  authHandler
-                              //       .handleSignInEmail(_emailController.text,
-                              //           _passController.text)
-                              //       .then((User user) {
-                              //     Navigator.push(
-                              //         context,
-                              //         new MaterialPageRoute(
-                              //             builder: (context) =>
-                              //                 new ProfilePage()));
-                              //   }).catchError((e) => print(e));
-                              // },
                                 onPressed: () async {
                                 if (_formKey.currentState.validate()) {
                                    authHandler
-                                    .handleSignInEmail(
+                                    .signInEmail(
                                            _emailController.text,
                                            _passController.text)
                                       .then((User user)  {

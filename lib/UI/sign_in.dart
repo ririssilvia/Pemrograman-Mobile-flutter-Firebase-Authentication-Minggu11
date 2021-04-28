@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
+
 final FirebaseAuth _auth = FirebaseAuth.instance;
 final GoogleSignIn googleSignIn = GoogleSignIn();
 String name;
@@ -35,6 +36,7 @@ Future<String> signInWithGoogle() async {
     assert(!user.isAnonymous);
     assert(await user.getIdToken() != null);
     final User currentUser = _auth.currentUser;
+    //cek emaill tidak sama dengan null menghasilkan trueee falsee
     assert(user.uid == currentUser.uid);
     print('signInWithGoogle succeeded: $user');
     return '$user';
@@ -47,32 +49,8 @@ Future<void> signOutGoogle() async {
   print("User Signed Out");
 }
 
-// //tugass
 
-// Future<SignInSignUpResult> createUser({String email, String pass}) async {
-//   try {
-//     UserCredential result = await _auth.createUserWithEmailAndPassword(
-//         email: email, password: pass);
-//     return SignInSignUpResult(user: result.user);
-//   } catch (e) {
-//     return SignInSignUpResult(message: e.toString());
-//   }
-// }
+
+
 
  
-
-// Future<SignInSignUpResult> signInWithEmail({String email, String pass}) async {
-//   try {
-//     UserCredential result =
-//         await _auth.signInWithEmailAndPassword(email: email, password: pass);
-//     return SignInSignUpResult(user: result.user);
-//   } catch (e) {
-//     return SignInSignUpResult(message: e.toString());
-//   }
-// }
-
-// Future<void> signOutEmail() async {
-//   _auth.signOut();
-//   print("User Signed Out");
-// }
-

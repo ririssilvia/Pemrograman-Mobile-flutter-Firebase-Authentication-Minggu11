@@ -38,7 +38,6 @@ class IntroScreen extends StatelessWidget {
                       },
                     child:Text('Get Sarted', style: TextStyle(fontSize: 20, color: Colors.black),) ,),
               )
-            
           ],
         ),
       ),

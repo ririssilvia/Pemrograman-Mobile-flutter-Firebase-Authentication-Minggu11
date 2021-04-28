@@ -14,11 +14,11 @@ class RegisterPage extends StatefulWidget {
 class _RegisterPageState extends State<RegisterPage> {
   TextEditingController _emailController = new TextEditingController();
   TextEditingController _passController = new TextEditingController();
-  // TextEditingController _confirmPassController = new TextEditingController();
+
   final _formKey = GlobalKey<FormState>();
   var authHandler = new Auth();
   bool _isHidePassword1 = true;
-  //bool _isHidePassword2 = true;
+
 
   void _togglePasswordVisibility() {
     setState(() {
@@ -26,11 +26,6 @@ class _RegisterPageState extends State<RegisterPage> {
     });
   }
 
-  // void _togglePasswordVisibility1() {
-  //   setState(() {
-  //     _isHidePassword2 = !_isHidePassword2;
-  //   });
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -158,49 +153,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             Padding(
                               padding: EdgeInsets.all(10),
                             ),
-                            // confirm Password TextField
-                            // Container(
-                            //   child: TextFormField(
-                            //     controller: _confirmPassController,
-                            //     obscureText: _isHidePassword2,
-                            //     cursorColor: Colors.white,
-                            //     style: TextStyle(color: Colors.white),
-                            //     decoration: InputDecoration(
-                            //         enabledBorder: OutlineInputBorder(
-                            //             borderSide:
-                            //                 BorderSide(color: Colors.blue),
-                            //             borderRadius:
-                            //                 BorderRadius.circular(30)),
-                            //         contentPadding: EdgeInsets.all(15),
-                            //         icon: Icon(
-                            //           Icons.lock,
-                            //           color: Colors.blue,
-                            //         ),
-                            //         suffixIcon: GestureDetector(
-                            //           onTap: () {
-                            //             _togglePasswordVisibility1();
-                            //           },
-                            //           child: Icon(
-                            //             _isHidePassword2
-                            //                 ? Icons.visibility_off
-                            //                 : Icons.visibility,
-                            //             color: _isHidePassword2
-                            //                 ? Colors.white
-                            //                 : Colors.white,
-                            //           ),
-                            //         ),
-                            //         filled: true,
-                            //         fillColor: Colors.blue,
-                            //         focusColor: Colors.blue,
-                            //         border: OutlineInputBorder(
-                            //             borderSide:
-                            //                 BorderSide(color: Colors.white),
-                            //             borderRadius:
-                            //                 BorderRadius.circular(30)),
-                            //         hintStyle: TextStyle(color: Colors.white),
-                            //         hintText: 'Confirm Password'),
-                            //   ),
-                            // ),
+                            
                             Padding(
                               padding: EdgeInsets.only(top: 60),
                             ),
@@ -212,37 +165,10 @@ class _RegisterPageState extends State<RegisterPage> {
                                 borderRadius:
                                     BorderRadiusDirectional.circular(30),
                               ),
-                              // onPressed: () async {
-                              //   SignInSignUpResult result = await createUser(
-                              //       email: _emailController.text,
-                              //       pass: _passController.text);
-                              //   if (result.user != null) {
-                              //     Navigator.push(
-                              //         context,
-                              //         MaterialPageRoute(
-                              //             builder: (context) => ProfilePage()));
-                              //   } else {
-                              //     // Show Dialog
-                              //     showDialog(
-                              //         context: context,
-                              //         builder: (context) => AlertDialog(
-                              //               title: Text("Error"),
-                              //               content: Text(result.message),
-                              //               actions: <Widget>[
-                              //                 // ignore: deprecated_member_use
-                              //                 FlatButton(
-                              //                   onPressed: () {
-                              //                     Navigator.pop(context);
-                              //                   },
-                              //                   child: Text("OK"),
-                              //                 )
-                              //               ],
-                              //             ));
-                              //   }
-                              // },
+                            
                               onPressed: () {
                                 authHandler
-                                    .handleSignUp(_emailController.text,
+                                    .createUserWithEmail(_emailController.text,
                                         _passController.text)
                                     .then((User user) {
                                   Navigator.push(
@@ -252,25 +178,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                               new ProfilePage()));
                                 }).catchError((e) => print(e));
                               },
-                              //  onPressed: () async {
-                              //   if (_formKey.currentState.validate()) {
-                              //      authHandler
-                              //       .handleSignInEmail(
-                              //              _emailController.text,
-                              //              _passController.text)
-                              //         .then((User user)  {
-                              //       if ( user != null) {
-                              //         Navigator.of(context).push(
-                              //           MaterialPageRoute(
-                              //             builder: (context) {
-                              //               return ProfilePage();
-                              //             },
-                              //           ),
-                              //         );
-                              //       }
-                              //     });
-                              //   }
-                              // },
+                              
                               child: Text(
                                 "Register",
                                 style: TextStyle(color: Colors.white),

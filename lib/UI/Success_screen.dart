@@ -57,17 +57,6 @@ class _SuccessScreenState extends State<SuccessScreen> {
                 'assets/images/uu.png',
               ),
             ),
-            // Padding(
-            //   padding: EdgeInsets.only(top: 20),
-            //   child: ListTile(
-            //     leading: CircleAvatar(
-            //       child: Icon(Icons.account_circle,
-            //           size: 100, color: Colors.white),
-            //       radius: 200,
-            //       backgroundColor: Colors.transparent,
-            //     ),
-            //   ),
-            // ),
             Padding(
               padding: EdgeInsets.only(top: 50),
               child: Text(
