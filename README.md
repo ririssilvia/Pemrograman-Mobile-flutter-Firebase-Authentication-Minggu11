@@ -1,10 +1,24 @@
-# prak10minggu11
+# PRAKTIKUM FIREBASE Minggu11
 
 A new Flutter project.
 
 ## Getting Started
 
 This project is a starting point for a Flutter application.
+<li><b>Nama  : Riris Silvia Zahri
+<li><b>Kelas : MI 2A
+<li><b>NIM   : 1931710085
+
+# Hasil Dari Praktikum
+firebase authentification yang dapat digunakan untuk melakukan login dengan Akun Google.
+![plot](./image/1.png)
+![plot](./image/2.png)
+![plot](./image/2.png)
+
+
+
+
+
 
 A few resources to get you started if this is your first Flutter project:
 
