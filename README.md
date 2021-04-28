@@ -13,7 +13,17 @@ This project is a starting point for a Flutter application.
 firebase authentification yang dapat digunakan untuk melakukan login dengan Akun Google.
 ![plot](./image/1.png)
 ![plot](./image/2.png)
-![plot](./image/2.png)
+![plot](./image/3.png)
+
+# Hasil Dari tugas 
+## Halaman Awal
+![plot](./image/a.png)
+## Modifikasi Halaman sign up dengan Akun google
+user dapat login dengan menggunakan akun yang sudah terdaftarkan di google
+![plot](./image/b.png)
+![plot](./image/c.png)
+![plot](./image/d.png)
+
 
 
 
