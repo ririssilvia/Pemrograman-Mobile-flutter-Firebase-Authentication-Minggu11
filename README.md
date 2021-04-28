@@ -33,7 +33,15 @@ user dapat login dengan menggunakan akun yang sudah terdaftarkan di google
 
 <br>ketika berhasil registrasi maka di web auth firebase akan terdapat user email dan password
 
-![plot](./image/g.png)
+![plot](./image/j.png)
+
+## Halaman Login untuk menampilkan pesan erorr saat login dengan email dan password
+![plot](./image/k.png)
+![plot](./image/l.png)
+![plot](./image/m.png)
+![plot](./image/n.png)
+
+
 
 
 
