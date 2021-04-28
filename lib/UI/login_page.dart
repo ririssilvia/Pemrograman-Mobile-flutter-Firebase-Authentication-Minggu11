@@ -193,7 +193,7 @@ class _LoginPageState extends State<LoginPage> {
                               children: <Widget>[
                                 Expanded(
                                   child: Divider(
-                                    thickness: 1,
+                                    thickness: 2,
                                     color: Colors.blue,
                                   ),
                                 ),
@@ -205,7 +205,7 @@ class _LoginPageState extends State<LoginPage> {
                                 SizedBox(width: 20),
                                 Expanded(
                                   child: Divider(
-                                    thickness: 1,
+                                    thickness: 2,
                                     color: Colors.blue,
                                   ),
                                 ),
