@@ -41,6 +41,11 @@ user dapat login dengan menggunakan akun yang sudah terdaftarkan di google
 ![plot](./image/m.png)
 ![plot](./image/n.png)
 
+## Halaman Login menggunakan user email dan passsword yang telah berhasil di registrasi
+
+![plot](./image/b.png)
+![plot](./image/o.png)
+![plot](./image/p.png)
 
 
 
