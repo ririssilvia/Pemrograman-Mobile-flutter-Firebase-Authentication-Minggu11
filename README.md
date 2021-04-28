@@ -24,6 +24,19 @@ user dapat login dengan menggunakan akun yang sudah terdaftarkan di google
 ![plot](./image/c.png)
 ![plot](./image/d.png)
 
+## Halaman Registrasi user dengan email dan password
+![plot](./image/e.png)
+![plot](./image/f.png)
+![plot](./image/h.png)
+![plot](./image/i.png)
+![plot](./image/g.png)
+
+<br>ketika berhasil registrasi maka di web auth firebase akan terdapat user email dan password
+
+![plot](./image/g.png)
+
+
+
 
 
 
